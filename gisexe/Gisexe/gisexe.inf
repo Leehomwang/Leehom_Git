@@ -1,0 +1,9 @@
+[version]
+    signature="$CHICAGO$"
+    AdvancedINF=2.0
+ [Add.Code]
+    gisexe.exe=gisexe.exe
+ [gisexe.exe]
+    file-win32-x86=thiscab
+    clsid={19B8F36A-6B41-41c2-948A-4A08DF148CAC}
+    RegisterServer=yes

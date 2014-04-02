@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F4DD061D-B1BA-357C-8F3A-C6FD32F137D3}</ProjectGuid>
+    <RootNamespace>gisexe</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>gisexe</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>gisexe</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">gisexe</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PostBuildEventUseInBuild>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">gisexe</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>"$(QTDIR)\include\QtCore";"$(QTDIR)\include\QtGui";"$(QTDIR)\include\QtOpenGL";"$(QTDIR)\include";"$(QTDIR)\include\ActiveQt";"debug";..\..\..\..\Qt\4.8.4\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QAXSERVER;QT_DLL;QT_OPENGL_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glaux.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;$(QTDIR)\lib\QAxServerd.lib;$(QTDIR)\lib\QtOpenGLd4.lib;$(QTDIR)\lib\QtGuid4.lib;$(QTDIR)\lib\QtCored4.lib;ole32.lib;oleaut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\gisexe.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QAXSERVER;QT_DLL;QT_OPENGL_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>E:\Qt\4.8.4\bin\idc.exe $(TargetPath) /idl $(IntDir)gisexe.idl -version 1.0
+if errorlevel 1 goto VCEnd
+ midl $(IntDir)gisexe.idl /nologo /tlb $(IntDir)gisexe.tlb
+if errorlevel 1 goto VCEnd
+E:\Qt\4.8.4\bin\idc.exe $(TargetPath) /tlb $(IntDir)gisexe.tlb
+if errorlevel 1 goto VCEnd
+E:\Qt\4.8.4\bin\idc.exe $(TargetPath) /regserver</Command>
+      <Message>E:\Qt\4.8.4\bin\idc.exe $(TargetPath) /idl $(IntDir)gisexe.idl -version 1.0
+ midl $(IntDir)gisexe.idl /nologo /tlb $(IntDir)gisexe.tlb
+ E:\Qt\4.8.4\bin\idc.exe $(TargetPath) /tlb $(IntDir)gisexe.tlb
+ E:\Qt\4.8.4\bin\idc.exe $(TargetPath) /regserver</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>"$(QTDIR)\include\QtCore";"$(QTDIR)\include\QtGui";"$(QTDIR)\include\QtOpenGL";"$(QTDIR)\include";"$(QTDIR)\include\ActiveQt";"release";..\..\..\..\Qt\4.8.4\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QAXSERVER;QT_DLL;QT_NO_DEBUG;QT_OPENGL_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;$(QTDIR)\lib\QAxServer.lib;$(QTDIR)\lib\QtOpenGL4.lib;$(QTDIR)\lib\QtGui4.lib;$(QTDIR)\lib\QtCore4.lib;ole32.lib;oleaut32.lib;D:\Qt\4.8.4\lib\QtGui4.lib;D:\Qt\4.8.4\lib\QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;d:\Qt\4.8.4\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\gisexe.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QAXSERVER;QT_DLL;QT_NO_DEBUG;QT_OPENGL_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>D:\Qt\4.8.4\bin\idc.exe $(TargetPath) /idl $(IntDir)gisexe.idl -version 1.0
+if errorlevel 1 goto VCEnd
+ midl $(IntDir)gisexe.idl /nologo /tlb $(IntDir)gisexe.tlb
+if errorlevel 1 goto VCEnd
+ D:\Qt\4.8.4\bin\idc.exe $(TargetPath) /tlb $(IntDir)gisexe.tlb
+if errorlevel 1 goto VCEnd
+ D:\Qt\4.8.4\bin\idc.exe $(TargetPath) /regserver</Command>
+      <Message>D:\Qt\4.8.4\bin\idc.exe $(TargetPath) /idl $(IntDir)gisexe.idl -version 1.0
+ midl $(IntDir)gisexe.idl /nologo /tlb $(IntDir)gisexe.tlb
+ D:\Qt\4.8.4\bin\idc.exe $(TargetPath) /tlb $(IntDir)gisexe.tlb
+ D:\Qt\4.8.4\bin\idc.exe $(TargetPath) /regserver</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Debug\moc_glwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_InfoDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_glwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_InfoDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\ui\InfoDialog.cpp" />
+    <ClCompile Include="src\ui\arcball.cpp" />
+    <ClCompile Include="src\model\chinarastermodel.cpp" />
+    <ClCompile Include="src\app\configuration.cpp" />
+    <ClCompile Include="src\util\console.cpp" />
+    <ClCompile Include="src\model\seidel\construct.c" />
+    <ClCompile Include="src\io\dbfloader.cpp" />
+    <ClCompile Include="src\io\shp\dbfopen.cpp" />
+    <ClCompile Include="src\painter\earthball.cpp" />
+    <ClCompile Include="src\model\fan.cpp" />
+    <ClCompile Include="src\ui\glwidget.cpp" />
+    <ClCompile Include="src\model\ladder.cpp" />
+    <ClCompile Include="src\util\linearcolor.cpp" />
+    <ClCompile Include="src\io\loader.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\painter\mesh.cpp" />
+    <ClCompile Include="src\model\seidel\misc.c" />
+    <ClCompile Include="src\model\model.cpp" />
+    <ClCompile Include="src\model\seidel\monotone.c" />
+    <ClCompile Include="src\model\seidel\mytri.cpp" />
+    <ClCompile Include="src\painter\painter.cpp" />
+    <ClCompile Include="src\parameter\parameter.cpp" />
+    <ClCompile Include="src\model\pie.cpp" />
+    <ClCompile Include="src\painter\projector.cpp" />
+    <ClCompile Include="src\io\rasterloader.cpp" />
+    <ClCompile Include="src\ui\scene.cpp" />
+    <ClCompile Include="src\painter\seaplane.cpp" />
+    <ClCompile Include="src\io\shploader.cpp" />
+    <ClCompile Include="src\io\shp\shpopen.cpp" />
+    <ClCompile Include="src\painter\skybox.cpp" />
+    <ClCompile Include="src\painter\sphere.cpp" />
+    <ClCompile Include="src\model\stackedbar.cpp" />
+    <ClCompile Include="src\model\symbolmodel.cpp" />
+    <ClCompile Include="src\util\texture.cpp" />
+    <ClCompile Include="src\model\seidel\tri.c" />
+    <ClCompile Include="src\util\util.cpp" />
+    <ClCompile Include="src\model\worldshpmodel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\ui\InfoDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQAXSERVER -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include" "-I$(QTDIR)\include\ActiveQt" "-I.\debug" "-I.\..\..\..\..\Qt\4.8.4\mkspecs\win32-msvc2010"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing InfoDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQAXSERVER -DQT_DLL -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DNDEBUG "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include" "-I$(QTDIR)\include\ActiveQt" "-I.\release" "-I.\..\..\..\..\Qt\4.8.4\mkspecs\win32-msvc2010"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing InfoDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\ui\arcball.h" />
+    <ClInclude Include="src\model\chinarastermodel.h" />
+    <ClInclude Include="src\util\common.h" />
+    <ClInclude Include="src\app\configuration.h" />
+    <ClInclude Include="src\util\console.h" />
+    <ClInclude Include="src\io\dbfloader.h" />
+    <ClInclude Include="src\painter\earthball.h" />
+    <ClInclude Include="src\model\fan.h" />
+    <CustomBuild Include="src\ui\glwidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQAXSERVER -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include" "-I$(QTDIR)\include\ActiveQt" "-I.\debug" "-I.\..\..\..\..\Qt\4.8.4\mkspecs\win32-msvc2010"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing glwidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQAXSERVER -DQT_DLL -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DNDEBUG "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include" "-I$(QTDIR)\include\ActiveQt" "-I.\release" "-I.\..\..\..\..\Qt\4.8.4\mkspecs\win32-msvc2010"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing glwidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\model\seidel\interface.h" />
+    <ClInclude Include="src\model\ladder.h" />
+    <ClInclude Include="src\util\linearcolor.h" />
+    <ClInclude Include="src\io\loader.h" />
+    <ClInclude Include="src\painter\mesh.h" />
+    <ClInclude Include="src\model\model.h" />
+    <ClInclude Include="src\model\seidel\mytri.h" />
+    <ClInclude Include="src\painter\painter.h" />
+    <ClInclude Include="src\parameter\parameter.h" />
+    <ClInclude Include="src\model\pie.h" />
+    <ClInclude Include="src\painter\projector.h" />
+    <ClInclude Include="src\io\rasterloader.h" />
+    <ClInclude Include="src\ui\scene.h" />
+    <ClInclude Include="src\painter\seaplane.h" />
+    <ClInclude Include="src\io\shp\shapefil.h" />
+    <ClInclude Include="src\io\shploader.h" />
+    <ClInclude Include="src\painter\skybox.h" />
+    <ClInclude Include="src\painter\sphere.h" />
+    <ClInclude Include="src\model\stackedbar.h" />
+    <ClInclude Include="src\model\symbolmodel.h" />
+    <ClInclude Include="src\util\texture.h" />
+    <ClInclude Include="src\model\seidel\triangulate.h" />
+    <ClInclude Include="src\util\util.h" />
+    <ClInclude Include="src\util\vec.h" />
+    <ClInclude Include="src\model\worldshpmodel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\qaxserver.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties QtVersion_x0020_Win32="4.8.4" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
